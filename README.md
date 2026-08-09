@@ -7,7 +7,7 @@ and lets you start / stop / restart each one independently. One
 panel per service, polling in parallel:
 
 ```
-Systemd Controller
+Service-Controller
 2 units under management
 
 ┌──────────────────────────────┐  ┌──────────────────────────────┐
