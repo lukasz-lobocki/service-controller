@@ -88,7 +88,6 @@ function render(id, status) {
   els['restart-btn'].disabled = !status.is_active || !status.ok;
 
   showError(els, status.ok ? null : (status.error || 'failed to read unit status'));
-  els['last-updated'].textContent = `updated ${new Date().toLocaleTimeString()}`;
 }
 
 async function pollAll() {
