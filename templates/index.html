@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>service control</title>
+  <title>Systemd Control</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon.png">
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
   <div class="page">
     <header class="page-header">
-      <p class="eyebrow">systemd control</p>
+      <p class="eyebrow">Systemd Control</p>
       <h1 class="page-title">{{ services|length }} unit{{ 's' if services|length != 1 else '' }} under management</h1>
     </header>
 
@@ -21,8 +22,8 @@
       <div class="panel-header">
         <span class="led" data-el="led"></span>
         <div class="header-text">
-          <p class="eyebrow" data-el="label"></p>
-          <p class="unit-name" data-el="unit-name"></p>
+          <p class="eyebrow" data-el="unit-name"></p>
+          <p class="unit-name" data-el="label"></p>
         </div>
         <span class="state-word" data-el="state-word">—</span>
       </div>
@@ -36,9 +37,6 @@
         <span class="spec-label">UnitFileState</span>
         <span class="spec-value" data-el="enabled-state">—</span>
 
-        <span class="spec-label">MainPID</span>
-        <span class="spec-value" data-el="main-pid">—</span>
-
         <span class="spec-label">Since</span>
         <span class="spec-value emphasis" data-el="since">—</span>
       </div>
@@ -50,7 +48,7 @@
 
       <div class="footer">
         <span data-el="last-updated">syncing…</span>
-        <span>polling every 3s</span>
+        <span>polling every 5s</span>
       </div>
     </section>
   </template>

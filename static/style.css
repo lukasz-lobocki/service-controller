@@ -4,16 +4,16 @@
   --bg: #10141a;
   --panel: #171d26;
   --panel-raised: #1c232e;
-  --border: #262f3d;
+  --border: #4e4e4e;
   --text: #e7eaf0;
   --text-dim: #8892a3;
-  --text-faint: #545e6e;
+  --text-faint: #8892a3;
 
-  --led-active: #52d7a3;
-  --led-active-glow: rgba(82, 215, 163, 0.45);
+  --led-active: rgb(82, 215, 113);
+  --led-active-glow: rgba(82, 215, 113, 0.45);
   --led-inactive: #6b7686;
-  --led-failed: #e8664f;
-  --led-failed-glow: rgba(232, 102, 79, 0.4);
+  --led-failed: rgb(232, 79, 79);
+  --led-failed-glow: rgba(232, 79, 79, 0.4);
   --led-warn: #e3ab4a;
 
   --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
@@ -40,7 +40,7 @@ body {
 
 .page {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1480px;
 }
 
 .page-header {

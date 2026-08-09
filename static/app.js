@@ -1,4 +1,4 @@
-const POLL_MS = 3000;
+const POLL_MS = 5000;
 const SERVICES = window.__SERVICES__ || [];
 
 const rack = document.getElementById('rack');
@@ -53,7 +53,6 @@ function render(id, status) {
   els['state-word'].textContent = state.toUpperCase();
   els['sub-state'].textContent = status.sub_state;
   els['enabled-state'].textContent = status.enabled_state;
-  els['main-pid'].textContent = status.main_pid === '0' ? '—' : status.main_pid;
   els['since'].textContent = status.is_active ? fmtSince(status.since) : '—';
 
   els.led.classList.toggle('pulse', status.is_active);
@@ -99,7 +98,7 @@ async function pollAll() {
     for (const id of Object.keys(data)) render(id, data[id]);
   } catch (e) {
     for (const id of Object.keys(panels)) {
-      showError(panels[id].els, 'lost contact with service-controller backend');
+      showError(panels[id].els, 'lost contact with llama-control backend');
     }
   }
 }
