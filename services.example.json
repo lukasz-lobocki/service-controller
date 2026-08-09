@@ -1,0 +1,5 @@
+[
+  {"id": "llama-gpu", "unit": "llama-server.service", "label": "Llama Server (GPU)"},
+  {"id": "llama-npu", "unit": "llama-npu.service", "label": "Llama Server (NPU)"},
+  {"unit": "stable-diffusion.service"}
+]

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>service control</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="page-header">
+      <p class="eyebrow">systemd control</p>
+      <h1 class="page-title">{{ services|length }} unit{{ 's' if services|length != 1 else '' }} under management</h1>
+    </header>
+
+    <div class="rack" id="rack"></div>
+  </div>
+
+  <template id="panel-template">
+    <section class="panel">
+      <div class="panel-header">
+        <span class="led" data-el="led"></span>
+        <div class="header-text">
+          <p class="eyebrow" data-el="label"></p>
+          <p class="unit-name" data-el="unit-name"></p>
+        </div>
+        <span class="state-word" data-el="state-word">—</span>
+      </div>
+
+      <div class="error-banner" data-el="error-banner"></div>
+
+      <div class="specs">
+        <span class="spec-label">SubState</span>
+        <span class="spec-value" data-el="sub-state">—</span>
+
+        <span class="spec-label">UnitFileState</span>
+        <span class="spec-value" data-el="enabled-state">—</span>
+
+        <span class="spec-label">MainPID</span>
+        <span class="spec-value" data-el="main-pid">—</span>
+
+        <span class="spec-label">Since</span>
+        <span class="spec-value emphasis" data-el="since">—</span>
+      </div>
+
+      <div class="actions">
+        <button class="btn-primary" data-el="toggle-btn" disabled>…</button>
+        <button class="btn-secondary" data-el="restart-btn" disabled>Restart</button>
+      </div>
+
+      <div class="footer">
+        <span data-el="last-updated">syncing…</span>
+        <span>polling every 3s</span>
+      </div>
+    </section>
+  </template>
+
+  <script>
+    // Embedded so panels render immediately, no extra round trip before first paint.
+    window.__SERVICES__ = {{ services|tojson }};
+  </script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

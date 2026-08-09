@@ -1,0 +1,24 @@
+[Unit]
+Description=service-controller web UI (status/start/stop for llama-server.service)
+After=network.target
+
+[Service]
+Type=simple
+User=service-controller
+Group=service-controller
+WorkingDirectory=/opt/service-controller
+Environment=SYSTEMD_SERVICE=llama-server.service
+Environment=HOST=127.0.0.1
+Environment=PORT=8090
+ExecStart=/opt/service-controller/venv/bin/python /opt/service-controller/app.py
+Restart=on-failure
+RestartSec=3
+
+# Light hardening — adjust if it conflicts with your sudoers/systemctl setup
+NoNewPrivileges=false
+ProtectSystem=strict
+ReadWritePaths=/opt/service-controller
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
