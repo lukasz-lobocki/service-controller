@@ -1,5 +1,7 @@
 [
-  {"id": "llama-gpu", "unit": "llama-server.service", "label": "Llama Server (GPU)"},
-  {"id": "llama-npu", "unit": "llama-npu.service", "label": "Llama Server (NPU)"},
-  {"unit": "stable-diffusion.service"}
+  {"id": "llama-gpu-strixhalo", "unit": "llama-cpp-strixhalo.service", "label": "StrixHalo llama Ornith (GPU)"},
+  {"id": "fastflowlm-npu", "unit": "flm.service", "label": "StrixHalo FastFlowLM Gemma (NPU)"},
+  {"id": "llama-gpu-l", "unit": "llama-cpp-l.service", "label": "llama Laguna (GPU)"},
+  {"id": "llama-gpu-m", "unit": "llama-cpp-m.service", "label": "llama Mistral (GPU)"},
+  {"id": "llama-gpu-q", "unit": "llama-cpp-q.service", "label": "llama Qwen (GPU)"}
 ]
