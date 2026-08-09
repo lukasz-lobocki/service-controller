@@ -1,6 +1,8 @@
-# service-controller
+<div align="center">
+  <img src="https://raw.githubusercontent.com/lukasz-lobocki/service-controller/refs/heads/main/LABEL_AI%20GENERATED_black.svg" alt="AI Generated" width="150">
+</div>
 
-This repository is **AI-GENERATED**
+# service-controller
 
 A web page that shows the live status of a set of systemd services
 and lets you start / stop / restart each one independently. One
@@ -13,9 +15,8 @@ Service-Controller
 ┌──────────────────────────────┐  ┌──────────────────────────────┐
 │ ● Llama Server (GPU)  ACTIVE │  │ ○ Stable Diffusion  INACTIVE │
 │ llama-server.service         │  │ stable-diffusion.service     │
-│ SubState        running      │  │ SubState        dead         │
+│ SubState         running     │  │ SubState         dead        │
 │ UnitFileState    enabled     │  │ UnitFileState    enabled     │
-│ MainPID          48213       │  │ MainPID          —           │
 │ Since            Aug 8,14:02 │  │ Since            —           │
 │ [ Stop ]   [ Restart ]       │  │ [ Start ]  [ Restart ]       │
 └──────────────────────────────┘  └──────────────────────────────┘
