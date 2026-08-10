@@ -148,3 +148,34 @@ status is now keyed by id and actions are scoped under `/api/<id>/`.
 
 No code changes needed for either step — panels are generated from
 config on every page load.
+
+## Documentation
+
+Full documentation is in `docs/`:
+
+| Document | Purpose |
+|---|---|
+| [Architecture](docs/architecture.md) | Components, startup, service list loading, systemctl verbs, sudo policy, UI wiring, data structures. |
+| [API Reference](docs/api-reference.md) | Endpoints, request/response schemas, error codes, curl examples. |
+| [Security Model](docs/security-model.md) | Reverse-proxy auth (Caddy+PocketID forward_auth), sudoers isolation, threat model, audit. |
+| [Configuration Reference](docs/config-reference.md) | `services.json` schema, `SERVICES_CONFIG`/`SYSTEMD_SERVICES`/`SYSTEMD_SERVICE`, validation regexes, derive/label rules. |
+| [Deployment Guide](docs/deployment-guide.md) | Production install, systemd hardening, Caddy+PocketID, IP restriction, log rotation, troubleshooting. |
+| [Development Workflow](docs/development-workflow.md) | Venv setup, fake test units, curl testing, dev Caddy proxy. |
+| [CSS Reference](docs/css-reference.md) | Custom properties, panel layout, LED states, responsive breakpoints, font stack. |
+| [Comprehensive Guide](docs/comprehensive-guide.md) | Single-page consolidated reference covering everything above. |
+</invoke>
+
+## Documentation
+
+Full documentation is in `docs/`:
+
+| Document | Purpose |
+|---|---|
+| [Architecture](docs/architecture.md) | Components, startup, service list loading, systemctl verbs, sudo policy, UI wiring, data structures. |
+| [API Reference](docs/api-reference.md) | Endpoints, request/response schemas, error codes, curl examples. |
+| [Security Model](docs/security-model.md) | Reverse-proxy auth (Caddy+PocketID forward_auth), sudoers isolation, threat model, audit. |
+| [Configuration Reference](docs/config-reference.md) | `services.json` schema, `SERVICES_CONFIG`/`SYSTEMD_SERVICES`/`SYSTEMD_SERVICE`, validation regexes, derive/label rules. |
+| [Deployment Guide](docs/deployment-guide.md) | Production install, systemd hardening, Caddy+PocketID, IP restriction, log rotation, troubleshooting. |
+| [Development Workflow](docs/development-workflow.md) | Venv setup, fake test units, curl testing, dev Caddy proxy. |
+| [CSS Reference](docs/css-reference.md) | Custom properties, panel layout, LED states, responsive breakpoints, font stack. |
+| [Comprehensive Guide](docs/comprehensive-guide.md) | Single-page consolidated reference covering everything above. |
