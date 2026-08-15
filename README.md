@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/lukasz-lobocki/service-controller/refs/heads/main/LABEL_AI%20GENERATED_black.svg" alt="AI Generated" width="150">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/EU-LABEL_AI_GENERATED_black.svg" alt="Repo is AI Generated" width="150">
 </div>
 
 # service-controller
